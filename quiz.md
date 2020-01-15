@@ -67,21 +67,20 @@ ___
 
 
 7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Phillippines` in year of `2015`. We want to analyze the `time_to_fund`, which is the time between the loan posted (`posted_time`) and the time the funding come (`funded_time`), in hour unit.  We want to see the monthly median of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
-
+   
    - [ ] The time to fund reach the longest time in October for Irregular
    - [ ] The time to fund reach the longest time in June for Bullet
    - [ ] For Irregular repayment, the time to fund increase during January to April
 
-
-8. Which repayment interval that generally perform the best?
+8. Which repayment interval that perform the best (has shortest time to fund) during January to April?
 
    - [ ] Monthly
    - [ ] Bullet
    - [ ] Irregular
    
    
-9. At what month the `Bullet` repayment interval has longer time to fund than the other two repayment interval?
+9. At what month the `Monthly` repayment interval has almost the same time to refund with `Irregular` repayment interval?
 
-   - [ ] January
+   - [ ] June
    - [ ] December
-   - [ ] June   
+   - [ ] August
