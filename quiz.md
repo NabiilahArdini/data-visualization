@@ -1,4 +1,4 @@
-# Optimization with Genetic Algorithm
+# Data Visualization Quiz
 ___
 **Instructions**
 
