@@ -24,21 +24,19 @@ Here is the list of the column description:
 * `repayment_interval`: Interval for the repayment of the loan
 ___
 
-1. At what range does the `lender_count` in `United States` has the highest frequency? You may need to check the distribution of the `lender_count`. To see the distribution of a single numerical data, we can use a histogram, or a density chart.
+1. At what range does the `lender_count` in `United States` has the highest frequency? You may need to check the distribution of the `lender_count`. To see the distribution of a single numerical data, we can use a histogram or density chart.
 
    - [ ] 0-100
    - [ ] 100-200
    - [ ] 200-400
    
-<br>   
    
-2. What is the relationship between loan amount and lender count in `Manufacturing` Sector? Does loan with higher amount will attract more lender? To see the relationship or pattern between two variables, we can use scatterplot.
+2. What is the pattern between loan amount and lender count in `Manufacturing` Sector? Does loan with higher amount will attract more lender? To see the relationship or pattern between two variables, we can use scatterplot.
 
    - [ ] The higher the loan amount, the lower the lender count
    - [ ] The higher the loan amount, the higher the lender count
    - [ ] Loan amount and lender count don't have any meaningful relationship
 
-<br>
 
 3. Which statement is true based on the previous scatterplot?
 
@@ -46,23 +44,20 @@ ___
    - [ ] There are some loan that has big lender count but little loan amount
    - [ ] Most of the loan request has loan amount more than 7500
    
-<br>
-   
-4. Can you tell us which sector has the highest median of `term_in_months`? Try to remember which chart that will give us information about median of a data. Is boxplot suitable for this kind of task?
 
-   - [ ] Wholesale
-   - [ ] Health
-   - [ ] Housing
-
-<br>
-   
-5. Based on the previous plot, which sector has the least amount of outlier? 
+4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? What plot can be used to detect an outlier? 
 
    - [ ] Wholesale
    - [ ] Entertainment
    - [ ] Services
 
-<br>
+
+5. Based on the previous plot, which sector has a low-valued outlier (outlier with close to 0)? 
+
+   - [ ] Education
+   - [ ] Services
+   - [ ] Health
+
 
 6. Which sector has the widest variance of `term_in_months` based on the plot? Remember that variance is a measure of spread of the data, including the outliers.
 
@@ -70,7 +65,6 @@ ___
    - [ ] Education 
    - [ ] Construction
 
-<br>
 
 7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Phillippines` in year of `2015`. We want to analyze the `time_to_fund`, which is the time between the loan posted (`posted_time`) and the time the funding come (`funded_time`), in hour unit.  We want to see the monthly median of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
 
@@ -78,16 +72,14 @@ ___
    - [ ] The time to fund reach the longest time in June for Bullet
    - [ ] For Irregular repayment, the time to fund increase during January to April
 
-<br>
 
-8. Which repayment interval that has the highest fluctuation of time to fund?
+8. Which repayment interval that generally perform the best?
 
    - [ ] Monthly
    - [ ] Bullet
    - [ ] Irregular
-
-<br>
-
+   
+   
 9. At what month the `Bullet` repayment interval has longer time to fund than the other two repayment interval?
 
    - [ ] January
