@@ -52,7 +52,7 @@ ___
    - [ ] Services
 
 
-5. Based on the previous plot, which sector has a low-valued outlier (outlier with close to 0)? 
+5. Based on the previous plot, which sector has a low-valued outlier (outlier that is close to 0)? 
 
    - [ ] Education
    - [ ] Services
@@ -66,10 +66,10 @@ ___
    - [ ] Construction
 
 
-7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Phillippines` in year of `2015`. We want to analyze the `time_to_fund`, which is the time between the loan posted (`posted_time`) and the time the funding come (`funded_time`), in hour unit.  We want to see the monthly median of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
+7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Phillippines` in year of `2015`. We want to analyze the `time_to_fund`, which is the time between the loan posted (`posted_time`) and the time the funding come (`funded_time`), in hourly unit.  We will analyze the monthly mean of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
    
-   - [ ] The time to fund reach the longest time in October for Irregular
-   - [ ] The time to fund reach the longest time in June for Bullet
+   - [ ] The time to fund reach the longest time in October for Irregular repayment interval
+   - [ ] The time to fund reach the longest time in June for Bullet repayment interval
    - [ ] For Irregular repayment, the time to fund increase during January to April
 
 8. Which repayment interval that perform the best (has shortest time to fund) during January to April?
