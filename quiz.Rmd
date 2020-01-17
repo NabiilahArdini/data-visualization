@@ -109,6 +109,7 @@ You can create boxplot to see the distribution of each sector
 7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Philippines` in year of `2015`. We want to analyze the time_to_fund, which is the time between the funding come (`funded_time`) with the time the loan posted (`posted_time`), in hourly unit.  We will analyze the monthly mean of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
 
 Hint: 
+- The resulting plot should look like a line chart identical to the Guatemala.png file
 - First, We need to transform any date data into date format. 
 - We need to create column that contains year of the posted time for subsetting.  
 - Then, we subset data based on the year 2015 and country of Philippines. 
