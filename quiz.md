@@ -2,8 +2,7 @@
 ___
 **Instructions**
 
-Hello, congratulations and thank you for taking part in the Data Visualization course. To test your abilities, let's do the quiz below.
- 
+Hello, congratulations and thank you for taking part in the Data Visualization course. To test your abilities, let's do the quiz below.  
 We will analyze data from **Kiva**, a non-profit organization that allows people to lend money via the Internet. Read the data from `loan_kiva.csv`. The data has 323,279 observations with 14 variables and consists of historical detail loan request throughout 2014 to 2015. 
 
 Here is the list of the column description:
@@ -22,6 +21,8 @@ Here is the list of the column description:
 * `term_in_months`: The duration for which the loan was disbursed in months
 * `lender_count`: The total number of lenders that contributed to this loan
 * `repayment_interval`: Interval for the repayment of the loan
+
+For more detailed guide on each questions, you can look at the quiz.Rmd file.
 ___
 
 1. At what range does the `lender_count` in `United States` has the highest frequency? You may need to check the distribution of the `lender_count`. To see the distribution of a single numerical data, we can use a histogram or density chart.
@@ -52,7 +53,7 @@ ___
    - [ ] Services
 
 
-5. Based on the previous plot, which sector has a low-valued outlier (outlier that is close to 0)? 
+5. Based on the previous plot, which sector has any low-valued outlier (outlier that is close to 0)? 
 
    - [ ] Education
    - [ ] Services
