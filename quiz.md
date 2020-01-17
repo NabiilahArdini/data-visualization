@@ -60,10 +60,10 @@ ___
    - [ ] Health
 
 
-6. Which sector has the widest variance of `term_in_months` based on the plot? Remember that variance is a measure of spread of the data, including the outliers.
+6. Based on the plot, which sector has the biggest 3rd Quartile (Q3) of `term_in_months`? 
 
    - [ ] Agriculture
-   - [ ] Education 
+   - [ ] Housing 
    - [ ] Construction
 
 
