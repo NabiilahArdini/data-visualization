@@ -60,7 +60,7 @@ ___
    - [ ] Health
 
 
-6. Based on the plot, which sector has the biggest 3rd Quartile (Q3) of `term_in_months`? 
+6. Based on the plot, which sector has the highest 3rd Quartile (Q3) of `term_in_months`? 
 
    - [ ] Agriculture
    - [ ] Housing 
