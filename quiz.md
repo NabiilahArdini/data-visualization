@@ -5,6 +5,8 @@ ___
 Hello, congratulations and thank you for taking part in the Data Visualization course. To test your abilities, let's do the quiz below.  
 We will analyze data from **Kiva**, a non-profit organization that allows people to lend money via the Internet. Read the data from `loan_kiva.csv`. The data has 323,279 observations with 14 variables and consists of historical detail loan request throughout 2014 to 2015. 
 
+For more detailed guide on each questions, you can look at the quiz.Rmd file on this repository.
+
 Here is the list of the column description:
 
 * `id`: Unique ID for loan (Loan ID)
@@ -21,8 +23,6 @@ Here is the list of the column description:
 * `term_in_months`: The duration for which the loan was disbursed in months
 * `lender_count`: The total number of lenders that contributed to this loan
 * `repayment_interval`: Interval for the repayment of the loan
-
-For more detailed guide on each questions, you can look at the quiz.Rmd file.
 ___
 
 1. At what range does the `lender_count` in `United States` has the highest frequency? You may need to check the distribution of the `lender_count`. To see the distribution of a single numerical data, we can use a histogram or density chart.
@@ -46,7 +46,7 @@ ___
    - [ ] Most of the loan request has loan amount more than 7500
    
 
-4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? What plot can be used to detect an outlier? 
+4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? You can use boxplot to see the distribution of `term_in_months` for each `sector`.
 
    - [ ] Wholesale
    - [ ] Entertainment
