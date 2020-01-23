@@ -80,7 +80,7 @@ After the data is ready, we can create the scatterplot to see the pattern betwee
    - [ ] Most of the loan request has loan amount more than 7500
 
 
-4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? What plot can be used to detect an outlier? 
+4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? You can use boxplot to see the distribution of `term_in_months` for each `sector`.
 
    - [ ] Wholesale
    - [ ] Entertainment
@@ -109,7 +109,7 @@ You can create boxplot to see the distribution of each sector
 7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Philippines` in year of `2015`. We want to analyze the time_to_fund, which is the time between the funding come (`funded_time`) with the time the loan posted (`posted_time`), in hourly unit.  We will analyze the monthly mean of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
 
 Hint: 
-- The resulting plot should look like a line chart identical to the Guatemala.png file
+- The resulting plot should look like a line chart similar to the Guatemala.png file but we subset the data for country of **Philippines** and year **2015**.
 - First, We need to transform any date data into date format. 
 - We need to create column that contains year of the posted time for subsetting.  
 - Then, we subset data based on the year 2015 and country of Philippines. 
