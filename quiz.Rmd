@@ -9,142 +9,128 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Instructions**
+This quiz is part of Algoritma Academy assessment process. Congratulations on completing the Data Visualization course! We will conduct an assessment quiz to test practical data visualization techniques you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
 
-Hello, congratulations and thank you for taking part in the Data Visualization course. To test your abilities, let's do the quiz below.
+## Inspecting Dataset
  
-We will analyze data from **Kiva**, a non-profit organization that allows people to lend money via the Internet. Read the data from `loan_kiva.csv`. The data has 323,279 observations with 14 variables and consists of historical detail loan request throughout 2014 to 2015. 
+We will analyze the dataset from **Kiva**, a non-profit organization that allows people to lend money using a P2P(peer-to-peer) model. Read the data from `loan_kiva.csv`. The data has 323,279 observations with 14 variables and consists of a historical detail loan request between 2014 and 2015. 
 
-First, load the data.
+First, you will need to load the data:
 
 ```{r}
 # Your code here
 ```
 
-Here is the list of the column description:
-
-* `id`: Unique ID for loan (Loan ID)
+Please use the following glossary of each column for your reference:
+* `id`: Unique ID for the loan (Loan ID)
 * `funded_amount`: The amount disbursed by Kiva to the field agent(USD)
 * `loan_amount`: The amount disbursed by the field agent to the borrower(USD)
-* `activity`: More granular category
-* `sector`: High level category
-* `country`: Full country name of country in which loan was disbursed
+* `activity`: Activity type as a more granular category
+* `sector`: High-level category of the loan
+* `country`: Full country name of the country in which loan was disbursed
 * `region`: Full region name within the country
 * `currency`: The currency in which the loan was disbursed
-* `partner_id`: ID of partner organization
+* `partner_id`: ID of the partner organization
 * `posted_time`: The time at which the loan is posted on Kiva by the field agent
 * `funded_time`: The time at which the loan posted to Kiva gets funded by lenders completely
 * `term_in_months`: The duration for which the loan was disbursed in months
-* `lender_count`: The total number of lenders that contributed to this loan
+* `lender_count`: The total number of lenders that contributed to each loan
 * `repayment_interval`: Interval for the repayment of the loan
 ___
 
-1. At what range does the `lender_count` in `United States` has the highest frequency? You may need to check the distribution of the `lender_count`. To see the distribution of a single numerical data, we can use a histogram or density chart.
+## Analyzing Data Distribution
 
-First, we need to choose only the loan process that happened in United States
-```{r}
-# your code here
-```
+1. By visualizing the distribution of variable `lender_count`, we can find out which numerical range has the highest frequency of data occurrence. Say we are interested in finding out the range of the highest frequency of `lender_count` for all loans in the United States. You may need to check the distribution of the `lender_count` using a histogram or density chart.
 
-After you have prepared the data, you can plot the distribution of the lender count now with histogram
-```{r}
-# your code here
-```
-
+    First, you need to subset all loan posted from the United States:
+    ```{r}
+    # your code here
+    ```
+    Then, try to visualize the data distribution of the lender count:
+    ```{r}
+    # your code here
+    ```
+    Which range has the highest frequency of `lender_count` in the United States?
    - [ ] 0-100
    - [ ] 100-200
    - [ ] 200-400
 
-   
-2. What is the pattern between loan amount and lender count in `Manufacturing` Sector? Does loan with higher amount will attract more lender? To see the relationship or pattern between two variables, we can use scatterplot.
+## Understanding Data Relationship
 
-You need to prepare the data by selecting only the data for Manufacturing sector
+Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the loan amount and number of lenders. To do that, we can use a scatter plot.
+
+First, You will need to subset the dataset to acquire all loans from the Manufacturing sector:
+```{r}
+# your code here
+```
+Then, we can create the scatterplot to see if there’s any existing pattern between the amount of loan and the number of lenders:
+```{r}
+# your code here
+```
+2. How would you describe the relationship between the amount of loan and the number of lenders from all loans within the `Manufacturing` sector?  
+   - [ ] The higher the loan amount, the lower the number of lenders
+   - [ ] The higher the loan amount, the higher the number of lenders
+   - [ ] Loan amount and number of lenderst does not have any apparent relationship
+
+3. Which statement is true based on the scatterplot you have created?
+
+   - [ ] There are some loans that have a relatively large amount of loan with a small number of lenders
+   - [ ] There are some loans that have a relatively large number of lenders with a small amount of loan
+   - [ ] Most of the loan requests have the loan amount of more than 7,500 USD
+
+## Using Boxplot for Visualizing Data Distribution
+
+A boxplot is a common visualization tool to analyze data distribution and detecting outliers. In R, if you create a plot using a categorical variable as one axis, and numerical variable for the other axis, the default resulting plot is a boxplot. Say you would like to analyze the distribution difference between each sector of variable `term_in_months`, try to create a boxplot using either R base plot or a `ggplot` and answer all the following questions:
 ```{r}
 # your code here
 ```
 
-After the data is ready, we can create the scatterplot to see the pattern between the loan amount and the lender count
-```{r}
-# your code here
-```
-
-   - [ ] The higher the loan amount, the lower the lender count
-   - [ ] The higher the loan amount, the higher the lender count
-   - [ ] Loan amount and lender count don't have any meaningful relationship
-
-
-3. Which statement is true based on the previous scatterplot?
-
-   - [ ] There are some loan that has big loan amount but little number of lender count
-   - [ ] There are some loan that has big lender count but little loan amount
-   - [ ] Most of the loan request has loan amount more than 7500
-
-
-4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? You can use boxplot to see the distribution of `term_in_months` for each `sector`.
-
+4. Which of the following sectors has the most uniformed distribution, identified as the one with the least amount of outliers?
    - [ ] Wholesale
    - [ ] Entertainment
    - [ ] Services
-
-You can create boxplot to see the distribution of each sector
-```{r}
-# your code here
-```
-
-
-5. Based on the previous plot, which sector has any low-valued outlier (outlier that is close to 0)? 
-
+5. Based on the boxplot you have created, which sector has a low-valued outlier for `term_in_months`? 
    - [ ] Education
    - [ ] Services
    - [ ] Health
 
-
-6. Based on the plot, which sector has the biggest 3rd Quartile (Q3) of `term_in_months`? 
-
+6. Based on the boxplot you have created, which sector has the highest 3rd Quantile (Q3) value of `term_in_months`? 
    - [ ] Agriculture
    - [ ] Housing
    - [ ] Construction
 
+## Using Line Chart for Trend Analysis
 
-7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Philippines` in year of `2015`. We want to analyze the time_to_fund, which is the time between the funding come (`funded_time`) with the time the loan posted (`posted_time`), in hourly unit.  We will analyze the monthly mean of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
+Consider the following case: One of the data analysts in Kiva is tasked to analyze the time duration of a loan from the first time being posted to be fully funded in the Philippines according to each repayment interval types. The analyst then tried to visualize the monthly trend of the average funded time duration in hourly units each month in 2014. Pay attention to the resulting plot of the analyst’s task:
 
-Hint: 
-- The resulting plot should look like a line chart similar to the Guatemala.png file but we subset the data for country of **Philippines** and year **2015**.
-- First, We need to transform any date data into date format. 
-- We need to create column that contains year of the posted time for subsetting.  
-- Then, we subset data based on the year 2015 and country of Philippines. 
-- Since we want to measure the time to fund, we need to create new column that contains the difference between posted time and funded time. 
-- This column will have data type of time, so we need to convert them to numeric and divide by 60 so the time would be in hourly value. 
+![](Guatemala.PNG)
+
+Now your task is to recreate the previous plot using all loans posted in 2015.
+**Hint:**
+- First we need to subset the data for the country of **Philippines** and year **2015**.
+- Next, We need to transform any date data into date format. 
+- We need to create a column that contains the year of the posted time for subsetting.  
+- Then, we subset data based on the year 2015 and the country of the Philippines. 
+- Since we want to measure the time to fund, we need to create a new column that contains the difference between posted time and funded time. 
+- This column will have a data type of time, so we need to convert them to numeric and divide by 60, so the time would be in hourly value. 
 - Next, we create the column that contains the month of the posted time for data aggregation. 
 - At last, we aggregate the data to find the mean of time to fund based on the repayment interval and the month. 
-
 ```{r}
 # your code here
 ```
 
-After the data is ready, now you can build the plot to show the trend of monthly time to find.
+7. Which statement below is **WRONG** based on the trend line?
+   - [ ] The time to fund reached the longest time in October for Irregular repayment interval
+   - [ ] The time to fund reached the longest time in June for Bullet repayment interval
+   - [ ] For Irregular repayment, the time to fund increased from January to April
 
-```{r}
-# your code here
-```
-
-
-   - [ ] The time to fund reach the longest time in October for Irregular repayment interval
-   - [ ] The time to fund reach the longest time in June for Bullet repayment interval
-   - [ ] For Irregular repayment, the time to fund increase during January to April
-
-
-8. Which repayment interval that perform the best (has shortest time to fund) during January to April?
-
+8. Which repayment interval type performed the best (has the shortest time to fund) from January to April?
    - [ ] Monthly
    - [ ] Bullet
    - [ ] Irregular
-   
-   
+ 
 9. At what month the `Monthly` repayment interval has almost the same time to refund with `Irregular` repayment interval?
-
    - [ ] June
    - [ ] December
    - [ ] August
-   
-   
+
