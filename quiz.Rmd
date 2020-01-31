@@ -1,0 +1,138 @@
+---
+title: "Data Visualization Quiz"
+author: "Arga Adyatama"
+date: "1/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This quiz is part of Algoritma Academy assessment process. Congratulations on completing the Data Visualization course! We will conduct an assessment quiz to test practical data visualization techniques you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
+
+## Inspecting Dataset
+ 
+We will analyze the dataset from **Kiva**, a non-profit organization that allows people to lend money using a P2P(peer-to-peer) model. Read the data from `loan_kiva.csv`. The data has 165,040 observations with 14 variables and consists of a historical detail loan request in 2015. 
+
+First, you will need to load the data:
+
+```{r}
+# Your code here
+```
+
+Please use the following glossary of each column for your reference:
+* `id`: Unique ID for the loan (Loan ID)
+* `funded_amount`: The amount disbursed by Kiva to the field agent(USD)
+* `loan_amount`: The amount disbursed by the field agent to the borrower(USD)
+* `activity`: Activity type as a more granular category
+* `sector`: High-level category of the loan
+* `country`: Full country name of the country in which loan was disbursed
+* `region`: Full region name within the country
+* `currency`: The currency in which the loan was disbursed
+* `partner_id`: ID of the partner organization
+* `posted_time`: The time at which the loan is posted on Kiva by the field agent
+* `funded_time`: The time at which the loan posted to Kiva gets funded by lenders completely
+* `term_in_months`: The duration for which the loan was disbursed in months
+* `lender_count`: The total number of lenders that contributed to each loan
+* `repayment_interval`: Interval for the repayment of the loan
+___
+
+## Analyzing Data Distribution
+
+1. By visualizing the distribution of variable `lender_count`, we can find out which numerical range has the highest frequency of data occurrence. Say we are interested in finding out the range of the highest frequency of `lender_count` for all loans in the United States. You may need to check the distribution of the `lender_count` using a histogram or density chart.
+
+    First, you need to subset all loan posted from the United States:
+    ```{r}
+    # your code here
+    ```
+    Then, try to visualize the data distribution of the lender count:
+    ```{r}
+    # your code here
+    ```
+    Which range has the highest frequency of `lender_count` in the United States?
+    
+   - [ ] 0-100
+   - [ ] 100-200
+   - [ ] 200-400
+
+## Understanding Data Relationship
+
+Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the loan amount and number of lenders. To do that, we can use a scatter plot.
+
+    First, You will need to subset the dataset to acquire all loans from the Manufacturing sector:
+```{r}
+# your code here
+```
+    
+    Then, we can create the scatterplot to see if there’s any existing pattern between the amount of loan and the number of lenders:
+```{r}
+# your code here
+```
+
+2. How would you describe the relationship between the amount of loan and the number of lenders from all loans within the `Manufacturing` sector?  
+   - [ ] The higher the loan amount, the lower the number of lenders
+   - [ ] The higher the loan amount, the higher the number of lenders
+   - [ ] Loan amount and number of lenderst does not have any apparent relationship
+
+3. Which statement is true based on the scatterplot you have created?
+
+   - [ ] There are some loans that have a relatively large amount of loan with a small number of lenders
+   - [ ] There are some loans that have a relatively large number of lenders with a small amount of loan
+   - [ ] Most of the loan requests have the loan amount of more than 7,500 USD
+
+## Using Line Chart for Trend Analysis
+
+Consider the following case: One of the data analysts in Kiva is tasked to analyze the time duration of a loan from the first time being posted to be fully funded in the Philippines according to each repayment interval types. The analyst then tried to visualize the monthly trend of the average funded time duration in hourly units each month. Pay attention to the resulting plot of the analyst’s task:
+
+![](Guatemala.png)
+
+Now your task is to recreate the previous plot using all loans posted.
+
+In order to analyze the trend, first we need to subset the data for the country of **Philippines**. We will need to convert any date data into date format.
+
+```{r}
+# your code here
+```
+
+4. What is the earliest and latest posted time of any loan in 2015?
+
+   - [ ] 2015-01-01 01:27:00 UTC and 2015-12-31 05:54:25 UTC
+   - [ ] 2015-01-01 03:34:51 UTC and 2015-12-31 05:54:25 UTC
+   - [ ] 2015-01-01 01:27:00 UTC and 2015-12-31 14:44:55 UTC
+   - [ ] 2015-01-01 00:42:30 UTC and 2015-12-31 05:54:25 UTC
+
+Now we are set to calculate the duration from a loan is posted until it is fully funded. We need to create a new column that contains the difference between the funded time and the posted time. We will call it **funding duration**.  This column will have a data type of *time* and presented in unit of minutes. We need to convert them into *numeric* and divide by 60, so the time would be in hourly value. 
+
+```{r}
+# your code here
+```
+
+Since we want to visualize the monthly average funding duration, we need to aggregate the data based on the month of the posted time and the repayment interval. You may need to create a new column which contains the month of the posted time before aggregating the data.
+
+```{r}
+# your code here
+```
+
+5. Which repayment interval has the longest fund duration and at what month did it happen?
+
+   - [ ] monthly repayment interval in April
+   - [ ] bullet repayment interval in January
+   - [ ] monthly repayment interval in March
+
+The data has been properly prepared. Now it is your time to create the line plot to visualize the trend. Fill in the code below to produce the plot.
+
+```{r}
+# ggplot(loan_agg, aes(x = ........, y = ........., color = ......, group = .....))+
+#   geom_line()+
+#   geom_point()+
+#    labs(title = "Funding Duration Trend on Philippines, 2015")+
+#    theme_minimal()+
+#    theme(legend.position = "top")
+```
+
+6. Which statement is **WRONG** based on the line plot?
+
+   - [ ] Monthly repayment interval has almost the same funding duration with Irregular repayment interval in August
+   - [ ] Bullet repayment interval has longer funding duration than Irregular repayment interval June
+   - [ ] Monthly repayment interval never funded faster than Irregular repayment interval
