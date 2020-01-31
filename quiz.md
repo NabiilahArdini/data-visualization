@@ -62,7 +62,7 @@ ___
 
 Consider the following case: One of the data analysts in Kiva is tasked to analyze the time duration of a loan from the first time being posted to be fully funded in the Philippines according to each repayment interval types. The analyst then tried to visualize the monthly trend of the average funded time duration in hourly units each month.
 
-Pay attention to the resulting plot of the analyst’s task in `Guatemala.png`.
+Pay attention to the resulting plot of the analyst’s task in `Guatemala.png`. Now your task is to recreate the previous plot for country of Philippines using your data.
 
 In order to analyze the trend, first we need to subset the data for the country of **Philippines**. We will need to convert any date data into date format.
 
