@@ -23,65 +23,96 @@ Here is the list of the column description:
 * `term_in_months`: The duration for which the loan was disbursed in months
 * `lender_count`: The total number of lenders that contributed to this loan
 * `repayment_interval`: Interval for the repayment of the loan
+
+## Analyzing Data Distribution
+By visualizing the distribution of variable `lender_count`, we can find out which numerical range has the highest frequency of data occurrence. Say we are interested in finding out the range of the highest frequency of `lender_count` for all loans in the United States. You may need to check the distribution of the `lender_count` using a histogram or density chart.
 ___
 
-1. At what range does the `lender_count` in `United States` has the highest frequency? You may need to check the distribution of the `lender_count`. To see the distribution of a single numerical data, we can use a histogram or density chart.
+1. At what range does the `lender_count` in United States has the highest frequency?
 
    - [ ] 0-100
    - [ ] 100-200
    - [ ] 200-400
    
+
+___
+## Understanding Data Relationship
+
+Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the loan amount and number of lenders. To do that, we can use a scatter plot. 
+```
+# your code here
+```
+___
    
-2. What is the pattern between loan amount and lender count in `Manufacturing` Sector? Does loan with higher amount will attract more lender? To see the relationship or pattern between two variables, we can use scatterplot.
+2. How would you describe the relationship between the amount of loan and the number of lenders from all loans within the `Manufacturing` sector?
 
    - [ ] The higher the loan amount, the lower the lender count
    - [ ] The higher the loan amount, the higher the lender count
    - [ ] Loan amount and lender count don't have any meaningful relationship
 
 
-3. Which statement is true based on the previous scatterplot?
+3. Which statement is true based on the scatterplot you have created?
 
    - [ ] There are some loan that has big loan amount but little number of lender count
    - [ ] There are some loan that has big lender count but little loan amount
    - [ ] Most of the loan request has loan amount more than 7500
    
+___
+## Using Line Chart for Trend Analysis
 
-4. Can you tell me which sector has the least amount of outlier of the `term_in_months` value? You can use boxplot to see the distribution of `term_in_months` for each `sector`.
+Consider the following case: One of the data analysts in Kiva is tasked to analyze the time duration of a loan from the first time being posted to be fully funded in the Philippines according to each repayment interval types. The analyst then tried to visualize the monthly trend of the average funded time duration in hourly units each month.
 
-   - [ ] Wholesale
-   - [ ] Entertainment
-   - [ ] Services
+Pay attention to the resulting plot of the analyst’s task in `Guatemala.png`.
 
+In order to analyze the trend, first we need to subset the data for the country of **Philippines**. We will need to convert any date data into date format.
 
-5. Based on the previous plot, which sector has any low-valued outlier (outlier that is close to 0)? 
+```
+# your code here
+```
+___
 
-   - [ ] Education
-   - [ ] Services
-   - [ ] Health
+4. What is the earliest and latest posted time of any loan in 2015?
 
-
-6. Based on the plot, which sector has the highest 3rd Quartile (Q3) of `term_in_months`? 
-
-   - [ ] Agriculture
-   - [ ] Housing 
-   - [ ] Construction
-
-
-7. People who requested a loan perhaps were in dire situation and need the money immediately. We want to observe the data for people in `Philippines` in year of `2015`. We want to analyze the `time_to_fund`, which is the time between the funding come (`funded_time`) with the time the loan posted (`posted_time`), in hourly unit.  We will analyze the monthly mean of `time_to_fund` for each `repayment_interval`. Plot the data with trend line or other chart that can capture periodic data. Which statement below is **WRONG** based on the trend line?
+   - [ ] 2015-01-01 01:27:00 UTC and 2015-12-31 05:54:25 UTC
+   - [ ] 2015-01-01 03:34:51 UTC and 2015-12-31 05:54:25 UTC
+   - [ ] 2015-01-01 01:27:00 UTC and 2015-12-31 14:44:55 UTC
+   - [ ] 2015-01-01 00:42:30 UTC and 2015-12-31 05:54:25 UTC
    
-   - [ ] The time to fund reach the longest time in October for Irregular repayment interval
-   - [ ] The time to fund reach the longest time in June for Bullet repayment interval
-   - [ ] For Irregular repayment, the time to fund increase during January to April
+___
+Now we are set to calculate the duration from a loan is posted until it is fully funded. We need to create a new column that contains the difference between the funded time and the posted time. We will call it **funding duration**.  This column will have a data type of *time* and presented in unit of minutes. We need to convert them into *numeric* and divide by 60, so the time would be in hourly value. 
 
-8. Which repayment interval that perform the best (has shortest time to fund) during January to April?
+```
+# your code here
+```
 
-   - [ ] Monthly
-   - [ ] Bullet
-   - [ ] Irregular
-   
-   
-9. At what month the `Monthly` repayment interval has almost the same time to refund with `Irregular` repayment interval?
+Since we want to visualize the monthly average funding duration, we need to aggregate the data based on the month of the posted time and the repayment interval. You may need to create a new column which contains the month of the posted time before aggregating the data.
 
-   - [ ] June
-   - [ ] December
-   - [ ] August
+```
+# your code here
+```
+___
+
+5. Which repayment interval has the longest fund duration and at what month did it happen?
+
+   - [ ] monthly repayment interval in April
+   - [ ] bullet repayment interval in January
+   - [ ] monthly repayment interval in March
+
+___   
+The data has been properly prepared. Now it is your time to create the line plot to visualize the trend. Fill in the code below to produce the plot.
+
+```
+# ggplot(loan_agg, aes(x = ........, y = ........., color = ......, group = .....))+
+#   geom_line()+
+#   geom_point()+
+#    labs(title = "Funding Duration Trend on Philippines, 2015")+
+#    theme_minimal()+
+#    theme(legend.position = "top")
+```
+___
+
+6. Which statement is **WRONG** based on the line plot?
+
+   - [ ] Monthly repayment interval has almost the same funding duration with Irregular repayment interval in August
+   - [ ] Bullet repayment interval has longer funding duration than Irregular repayment interval June
+   - [ ] Monthly repayment interval never funded faster than Irregular repayment interval
