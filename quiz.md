@@ -3,7 +3,7 @@ ___
 **Instructions**
 
 Hello, congratulations and thank you for taking part in the Data Visualization course. To test your abilities, let's do the quiz below.  
-We will analyze data from **Kiva**, a non-profit organization that allows people to lend money via the Internet. Read the data from `loan_kiva.csv`. The data has 323,279 observations with 14 variables and consists of historical detail loan request throughout 2014 to 2015. 
+We will analyze the dataset from **Kiva**, a non-profit organization that allows people to lend money using a P2P(peer-to-peer) model. Read the data from `loan_kiva.csv`. The data has 165,040 observations with 14 variables and consists of a historical detail loan request in 2015. 
 
 For more detailed guide on each questions, you can look at the quiz.Rmd file on this repository.
 
