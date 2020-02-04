@@ -111,8 +111,8 @@ The data has been properly prepared. Now it is your time to create the line plot
 ```
 ___
 
-6. Which statement is **WRONG** based on the line plot?
+6. Which statement is **TRUE** based on the line plot?
 
    - [ ] Monthly repayment interval has almost the same funding duration with Irregular repayment interval in August
-   - [ ] Bullet repayment interval has longer funding duration than Irregular repayment interval June
+   - [ ] Bullet repayment interval has longer funding duration than Irregular repayment interval in June
    - [ ] Monthly repayment interval never funded faster than Irregular repayment interval
