@@ -58,7 +58,7 @@ ___
 
 ## Understanding Data Relationship
 
-Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the loan amount and number of lenders. To do that, we can use a scatter plot.
+Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the amount of loan (`loan_amount`) and number of lenders (`lender_count`). To do that, we can use a scatter plot.
 
     First, You will need to subset the dataset to acquire all loans from the Manufacturing sector:
 ```{r}
@@ -108,7 +108,13 @@ Now we are set to calculate the duration from a loan is posted until it is fully
 # your code here
 ```
 
-Since we want to visualize the monthly average funding duration, we need to aggregate the data based on the month of the posted time and the repayment interval. You may need to create a new column which contains the month of the posted time before aggregating the data.
+Since we want to visualize the monthly average funding duration, you need to create a new column which contains the month of the posted time before aggregating the data. 
+
+```{r}
+# your code here
+```
+
+Finally, we will start to aggregate the data based on the month of the posted time and the repayment interval to get the average funding duration. 
 
 ```{r}
 # your code here
@@ -123,7 +129,7 @@ Since we want to visualize the monthly average funding duration, we need to aggr
 The data has been properly prepared. Now it is your time to create the line plot to visualize the trend. Fill in the code below to produce the plot.
 
 ```{r}
-# ggplot(loan_agg, aes(x = ........, y = ........., color = ......, group = .....))+
+# ggplot(loan_agg, aes(x = ........, y = ........., color = ......, group = repayment_interval))+
 #   geom_line()+
 #   geom_point()+
 #    labs(title = "Funding Duration Trend on Philippines, 2015")+
