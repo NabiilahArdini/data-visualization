@@ -26,7 +26,10 @@ Here is the list of the column description:
 * `repayment_interval`: Interval for the repayment of the loan
 
 ## Analyzing Data Distribution
-By visualizing the distribution of variable `lender_count`, we can find out which numerical range has the highest frequency of data occurrence. Say we are interested in finding out the range of the highest frequency of `lender_count` for all loans in the United States. You may need to check the distribution of the `lender_count` using a histogram or density chart.
+By visualizing the distribution of variable `lender_count`, we can find out which numerical range has the highest frequency of data occurrence. Say we are interested in finding out the range of the highest frequency of `lender_count` for all loans in the United States. Therefore, the first thing we need to do is to filter the data so it only contain all data from United States. After the data is ready, you can start to make a plot to visualize the data. You may need to check the distribution of the `lender_count` using a histogram or density chart.
+```
+# your code here
+```
 ___
 
 1. At what range does the `lender_count` in United States has the highest frequency?
@@ -39,7 +42,7 @@ ___
 ___
 ## Understanding Data Relationship
 
-Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the loan amount and number of lenders. To do that, we can use a scatter plot. 
+Say we are interested in analyzing the loans posted in the Manufacturing sector. We would like to see the relationship or pattern between the amount of loan (`loan_amount`) and number of lenders (`lender_count`). To do that, we can use a scatter plot. 
 ```
 # your code here
 ```
@@ -65,7 +68,7 @@ Consider the following case: One of the data analysts in Kiva is tasked to analy
 
 Pay attention to the resulting plot of the analyst’s task in `Guatemala.png`. Now your task is to recreate the previous plot for country of Philippines using your data.
 
-In order to analyze the trend, first we need to subset the data for the country of **Philippines**. We will need to convert any date data into date format.
+In order to analyze the trend, first we need to subset the data for the country of **Philippines**. We will also need to convert any date data into a proper date format.
 
 ```
 # your code here
@@ -86,8 +89,12 @@ Now we are set to calculate the duration from a loan is posted until it is fully
 # your code here
 ```
 
-Since we want to visualize the monthly average funding duration, we need to aggregate the data based on the month of the posted time and the repayment interval. You may need to create a new column which contains the month of the posted time before aggregating the data.
+Since we want to visualize the monthly average funding duration, you need to create a new column which contains the month of the posted time before aggregating the data. 
+```
+# your code here
+```
 
+Finally, we will start to aggregate the data based on the month of the posted time and the repayment interval to get the average funding duration. 
 ```
 # your code here
 ```
@@ -103,7 +110,7 @@ ___
 The data has been properly prepared. Now it is your time to create the line plot to visualize the trend. Fill in the code below to produce the plot.
 
 ```
-# ggplot(loan_agg, aes(x = ........, y = ........., color = ......, group = .....))+
+# ggplot(loan_agg, aes(x = ........, y = ........., color = ......, group = repayment_interval))+
 #   geom_line()+
 #   geom_point()+
 #    labs(title = "Funding Duration Trend on Philippines, 2015")+
