@@ -115,7 +115,7 @@ Get the range of the posted time.
    - [ ] 2015-01-01 01:27:00 UTC and 2015-12-31 23:04:04 UTC
    - [ ] 2015-01-01 00:42:30 UTC and 2015-12-31 05:54:25 UTC
 
-Now we are set to calculate the duration from a loan is posted until it is fully funded. We need to create a new column that contains the difference between the funded time and the posted time. We will call it **funding duration**.  This column will have a data type of *time* and presented in unit of minutes. We need to convert them into *numeric* type and divide it by 60, so the time would be in hourly value. 
+Now we are set to calculate the duration from a loan is posted until it is fully funded. We need to create a new column that contains the difference between the funded time and the posted time. We will call it **funding_duration**.  You can use `difftime()` to get the time difference between funded time and the posted time. Make sure that the time would be in hourly unit. 
 
 Create a new column `funding_duration` which is the result of the difference between `funded_time` and `posted_time`. 
 ```{r}
@@ -155,5 +155,5 @@ The data has been properly prepared. Now it is your time to create the line plot
 6. Which statement is **TRUE** based on the line plot?
 
    - [ ] Monthly repayment interval has almost the same funding duration with Irregular repayment interval in August
-   - [ ] Bullet repayment interval has longer funding duration than Irregular repayment interval June
+   - [ ] Bullet repayment interval has longer funding duration than Irregular repayment interval in June
    - [ ] Monthly repayment interval never funded faster than Irregular repayment interval
