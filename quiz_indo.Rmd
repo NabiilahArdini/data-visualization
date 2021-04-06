@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization Quiz"
 author: "Arga Adyatama"
-date: "1/15/2020"
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat anda sudah menyelesaikan materi *Programming for Data Science* dan *Practical Statistics*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan kuis diharapkan dapat dilakukan di dalam kelas. Silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
+Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat anda sudah menyelesaikan materi *Data Visualization*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan kuis diharapkan dapat dilakukan di dalam kelas. Silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
 
 ## Dataset
 
